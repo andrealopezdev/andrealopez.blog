@@ -23,7 +23,7 @@
       <div id="site-title">
         <a href="{{ site.baseurl }}/">{{- site.title -}}</a>
       </div>
-      <div id="site-subtitle" class="font-italic">{{- site.tagline -}}</div>
+      <div id="site-subtitle">{{- site.tagline -}}</div>
     </div>
   </div>
 
@@ -69,6 +69,9 @@
   </a>
   <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
     <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/{{ site.linkedin.username }}" target="_blank">
+    <i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">Linked In</span>
   </a>
   {% assign email = site.social.email | split: '@' %}
   <!-- <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))">

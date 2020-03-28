@@ -22,6 +22,9 @@ platforms:
     icon: "fab fa-telegram"
     link: "https://telegram.me/share?text=TITLE&url=URL"
 
+    # ype: LinkedIn
+    # icon: "fab fa-linkedin"
+    # link: ""
   # Uncomment below if you need to.
   # -
   #   type: Weibo
