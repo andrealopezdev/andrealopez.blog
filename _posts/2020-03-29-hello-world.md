@@ -9,8 +9,8 @@ toc: false
 
 *#testPost*
 
-Quarantine 2020 is in full effect...
+quarantine 2020 is in full effect...
 
-Wishing you safety and connection from California. 
+wishing you safety and connection from California. 
 
 andrea 
