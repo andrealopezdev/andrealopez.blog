@@ -1,6 +1,7 @@
 ---
 title: "Test Post"
-date: 2020-03-27 00:07:00 +0800
+#     yyyy-MM-dd HH:mm:ss.SSS Z 
+date: 2020-03-27 00:07:00 -0800
 # categories: [Blogging, Testing
 # tags: [Test]
 toc: false
