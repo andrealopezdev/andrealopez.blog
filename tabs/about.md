@@ -7,7 +7,10 @@ title: About
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
+hey there, 
 
-(This site is under construction👷‍♀️🚧)
+using this site to informally share content with you
 
-<!-- > It doesn’t matter how beautiful the guess is, or how smart the guesser is, or how famous the guesser is: if the experiment disagrees with the guess, the guess is wrong. That’s all there is to it. - Richard Feynman. -->
+formally, <a href="https://andrealopez.dev/" target="_blank">developer</a> by craft
+
+andrea
