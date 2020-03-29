@@ -46,11 +46,11 @@
   /* Home page */
   --post-list-text-color: rgb(175, 176, 177);
   --btn-patinator-text-color: var(--text-color);
-  --btn-active-bg: #81AE9D;
-  --btn-active-border-color: #81AE9D;
+  --btn-active-bg: rgb(39, 40, 33);
+  --btn-active-border-color: var(--btn-border-color);
   --btn-text-color: var(--text-color);
   --btn-paginator-border-color: var(--btn-border-color);
-  --btn-paginator-shadow: var(--main-wrapper-bg);
+  --btn-paginator-shadow: #81AE9D;
 
   /* Posts */
   --toc-highlight: rgb(116, 178, 243);
