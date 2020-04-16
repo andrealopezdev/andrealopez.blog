@@ -8,9 +8,9 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Andrea Lopez                          # the main title
+title: Andrea's Blog                          # the main title
 
-tagline: Mobile Dev  # it will display as the sub-title
+tagline: Software stories # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Writings from a mobile developer.

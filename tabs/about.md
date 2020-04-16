@@ -7,10 +7,13 @@ title: About
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
-hey there, 
+Hey there, 
 
-using this site to informally share content with you
+By craft, I'm a <a href="https://andrealopez.dev/" target="_blank">developer</a> 
 
-formally, <a href="https://andrealopez.dev/" target="_blank">developer</a> by craft
+I'll do my best to use the categories and tags well so that you can grab and go
+
+Hope you find something fun or useful here
+
 
 andrea
