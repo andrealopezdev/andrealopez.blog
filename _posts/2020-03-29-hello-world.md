@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
 #     yyyy-MM-dd HH:mm:ss.SSS Z 
-date: 2020-03-29 00:00:00 -0700
+date: 2020-03-29 00:00:00 -0800
 # categories: [Blogging, Testing]
 # tags: [Test]
 toc: false
