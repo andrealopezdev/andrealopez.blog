@@ -10,5 +10,10 @@ order: 4
 # MIT License
 ---
 
+Hey there,
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+I'm a <a href="https://andrealopez.dev/" target="_blank">developer</a>
+
+Here to share my tech projects and thoughts with you
+
+Andrea
