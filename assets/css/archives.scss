@@ -1,12 +1,13 @@
 ---
+# Style for Archives
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2019 Cotes Chung
+# MIT License
 ---
-/*!
-  Style for Archives
-  v2.0
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2019 Cotes Chung
-  MIT License
-*/
+
+
+{% include_relative _addon/main.scss %}
 
 %date-timeline {
   content: "";
@@ -28,7 +29,7 @@
       background-image: linear-gradient(
         to left, #fff, #fbfbfb, #fbfbfb, #fbfbfb, #fff);
     }
-    >div {
+    > div {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -37,7 +38,6 @@
 
   span.lead {
     font-size: 1.5rem;
-    font-family: 'Oswald', sans-serif;
     position: relative;
     left: 8px;
 
@@ -49,8 +49,7 @@
       }
     }
 
-    &::after {
-      /* Year dot */
+    &::after { /* Year dot */
       content: "";
       display: block;
       position: relative;
@@ -75,8 +74,8 @@
     &.month {
       width: 1.4rem;
       text-align: center;
-      font-family: 'Oswald', sans-serif;
-      ~a::before {
+
+      ~ a::before {
         /* A dot for Month and Day */
         content: "";
         display: inline-block;
@@ -96,7 +95,7 @@
     }
     &.day {
       font-size: 85%;
-      font-family: sans-serif;
+      font-family: 'Lato', sans-serif;
       text-align: center;
       margin-right: -2px;
       width: 1.2rem;
@@ -106,12 +105,12 @@
   } // #archives .date
 
   ul {
-    >li {
-      >div>a {
+    > li {
+      > div > a {
         /* post title in Archvies */
         margin-left: 2.5rem;
         position: relative;
-        top: .1rem;
+        top: 0.1rem;
       }
       &::after {
         @extend %date-timeline;
@@ -124,10 +123,10 @@
         top: -1.61rem;
       }
     }
-    &:not(:last-child)>li:last-child::after {
+    &:not(:last-child) > li:last-child::after {
       height: 3.4rem;
     }
-    &:last-child>li:last-child::after {
+    &:last-child > li:last-child::after {
       display: none;
     }
   } // #archives ul
