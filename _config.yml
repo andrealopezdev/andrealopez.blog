@@ -33,9 +33,10 @@ social:
   email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
-    - https://www.linkedin.com/in/username
+    - https://andrealopez.dev      # change to your twitter homepage
+    - https://twitter.com/andrealopezdev      # change to your twitter homepage
+    - https://github.com/andrealopezdev       # change to your github homepage
+    - https://www.linkedin.com/in/andrealopezdev
     # Uncomment below to add more social links
     # - https://www.facebook.com/username   
 
