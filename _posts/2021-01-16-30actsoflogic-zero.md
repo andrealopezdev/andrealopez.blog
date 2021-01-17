@@ -1,8 +1,10 @@
 ---
 title: 30 Acts of Logic
+author: Andrea Lopez
 date: 2021-01-16 01:44:00 -0800
 categories: [Tech, 30 Acts Of Logic]
 tags: [30actsoflogic]
+pin: true
 ---
 
 30 what? Acts of logic.. 
