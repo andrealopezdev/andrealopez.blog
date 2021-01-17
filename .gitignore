@@ -1,8 +1,2 @@
-# hidden files
+_site/
 .DS_Store
-.*
-!.github
-
-# jekyll cache
-_site
-vendor
