@@ -8,10 +8,10 @@
 
 @mixin dark-syntax {
   /* -----  My styles ------ */
-  --highlight-bg-color: #252525;
+  --highlight-bg-color: #272822;
   --highlighter-rouge-color: #de6b18;
   --highlight-lineno-color: #6c6c6d;
-  --highlight-lineno-border-color: #303435;
+  --highlight-lineno-border-color: #3c4042;
   --inline-code-bg: #272822;
 
   .highlight {
