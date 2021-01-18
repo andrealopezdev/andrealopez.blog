@@ -6,91 +6,79 @@
   MIT License
 -->
 
-<div id="sidebar" class="d-flex flex-column align-items-end">
-
-  <div class="profile-wrapper text-center">
-    <div id="avatar">
-      <a href="{{ site.baseurl }}/" alt="avatar" class="mx-auto">
+<div id="nav-wrapper">
+  <div id="profile-wrapper" class="d-flex flex-column">
+    <div id="avatar" class="d-flex justify-content-center">
+      <a href="{{ site.baseurl }}/" alt="avatar">
         {% assign avatar_url = site.avatar %}
-
-        {% unless avatar_url contains '://' %}
-          {% if site.img_cdn %}
-            {% assign avatar_url = avatar_url | prepend: site.img_cdn %}
-          {% else %}
-            {% assign avatar_url = avatar_url | relative_url %}
-          {% endif %}
-        {% endunless %}
-
-        <img src="{{ avatar_url }}" alt="avatar" onerror="this.style.display='none'">
+        {% capture start %}{{ site.avatar | slice: 0 }}{% endcapture %}
+        {% if start == '/' %}
+          {% assign avatar_url = avatar_url | prepend: site.baseurl %}
+        {% endif %}
+        <img src="{{ avatar_url }}" alt="avatar">
       </a>
     </div>
 
-    <div class="site-title mt-3">
-      <a href="{{ '/' | relative_url }}">{{- site.title -}}</a>
+    <div class="profile-text mt-3">
+      <div id="site-title">
+        <a href="{{ site.baseurl }}/">{{- site.title -}}</a>
+      </div>
+      <div id="site-subtitle">{{- site.tagline -}}</div>
     </div>
+  </div>
 
-    <div class="site-subtitle">{{- site.tagline -}}</div>
+  <ul class="nav flex-column">
+  {% assign page_urls = page.url | split: "/" %}
 
-  </div><!-- .profile-wrapper -->
+  {% for item in site.data.tabs %}
+    {% assign ref = site.baseurl | append: "/" %}
 
-  <ul class="w-100">
-    <!-- home -->
-    <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-      <a href="{{ '/' | relative_url }}" class="nav-link">
-        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
-        <span>{{ "HOME" }}</span>
-      </a>
-    </li>
-    <!-- the real tabs -->
-    {% for tab in site.tabs %}
-    <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-      <a href="{{ tab.url | relative_url }}" class="nav-link">
-        <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
-        <span>{{ tab.title | upcase }}</span>
+    {% if item.path %}
+      {% assign ref = ref | append: item.path | append: "/" %}
+      {% if item.url %}
+        {% assign ref = ref | append: item.url | append: "/" %}
+      {% endif %}
+    {% endif %}
+
+    <li class="nav-item d-flex justify-content-center
+      {% if item.url == page_urls.last
+        or item.name == page.tab_active
+        or item.name == "Home" and page.layout == "home" %}active{% endif %}">
+      <a href="{{ ref }}" class="nav-link d-flex justify-content-center align-items-center w-100">
+        <i class="fa-fw {{ item.icon }} ml-3 mr-3 unloaded"></i>
+        <span>{{ item.name | upcase }}</span>
       </a>
     </li> <!-- .nav-item -->
-    {% endfor %}
+  {% endfor %}
 
   </ul> <!-- ul.nav.flex-column -->
 
-  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center">
+</div><!-- #nav-wrapper -->
 
-    {% for entry in site.data.contact %}
-      {% capture url %}
-        {%- if entry.type == 'github' -%}
-          https://github.com/{{ site.github.username }}
-        {%- elsif entry.type == 'twitter' -%}
-          https://twitter.com/{{ site.twitter.username }}
-        {%- elsif entry.type == 'email' -%}
-          {% assign email = site.social.email | split: '@' %}
-          javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-        {%- elsif entry.type == 'rss' -%}
-          {{ "/feed.xml" | relative_url }}
-        {%- else -%}
-          {{ entry.url }}
-        {%- endif -%}
-      {% endcapture %}
+<div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4">
 
-      {% if url %}
-      <a href="{{ url }}" aria-label="{{ entry.type }}"
-        {% unless site.theme_mode %}class="order-{{ forloop.index | plus: 2 }}"{% endunless %}
-        {% unless entry.noblank %}target="_blank" rel="noopener"{% endunless %}>
-        <i class="{{ entry.icon }}"></i>
-      </a>
-      {% endif %}
+  {% if site.theme_mode == "dual" %}
+  <span id="mode-toggle-wrapper">
+    {% include mode-toggle.html %}
+  </span>
+  <span class="icon-border"></span>
+  {% endif %}
 
-    {% endfor %}
+  <a href="https://github.com/{{ site.github.username }}" target="_blank">
+    <i class="fab fa-github-alt"></i>
+  </a>
+  <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/{{ site.linkedin.username }}" target="_blank">
+    <i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">Linked In</span>
+  </a>
+  {% assign email = site.social.email | split: '@' %}
+  <!-- <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="{{ site.baseurl }}/feed.xml" target="_blank">
+    <i class="fas fa-rss"></i>
+  </a> -->
 
-    {% unless site.theme_mode %}
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border order-2"></span>
-      {% endif %}
-
-      <span id="mode-toggle-wrapper" class="order-1">
-        {% include mode-toggle.html %}
-      </span>
-    {% endunless %}
-
-  </div> <!-- .sidebar-bottom -->
-
-</div><!-- #sidebar -->
+</div>

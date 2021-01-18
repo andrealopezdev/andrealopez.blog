@@ -1,1 +1,1 @@
-# https://andrealopez.blog/
+# andrealopez.blog
