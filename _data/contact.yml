@@ -7,9 +7,13 @@
 -
   type: github
   icon: 'fab fa-github-alt'
--
+-   
   type: twitter
   icon: 'fab fa-twitter'
+-
+  type: linkedin
+  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
+  url:  'https://www.linkedin.com/in/andrealopezdev/'                  # Fill with your Linkedin homepage
 
 # Uncomment and complete the url below to enable more contact options
 # -
