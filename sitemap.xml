@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://andrealopez.blog/posts/hello-world/</loc>
+<lastmod>2020-03-29T01:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>https://andrealopez.blog/tabs/categories/</loc>
+<lastmod>2021-02-07T12:45:07-08:00</lastmod>
+</url>
+<url>
+<loc>https://andrealopez.blog/tabs/tags/</loc>
+<lastmod>2021-02-07T12:45:07-08:00</lastmod>
+</url>
+<url>
+<loc>https://andrealopez.blog/tabs/archives/</loc>
+<lastmod>2021-02-07T12:45:07-08:00</lastmod>
+</url>
+<url>
+<loc>https://andrealopez.blog/tabs/about/</loc>
+<lastmod>2021-02-07T12:45:07-08:00</lastmod>
+</url>
+<url>
+<loc>https://andrealopez.blog/</loc>
+</url>
+<url>
+<loc>https://andrealopez.blog/tags/testpost/</loc>
+</url>
+<url>
+<loc>https://andrealopez.blog/categories/random/</loc>
+</url>
+</urlset>
